@@ -1,0 +1,44 @@
+Script run on Thu 12/05/2019 at 12:31 PM
+Script run by  demarco018  on server  classdb.wcsu.edu  with db  cs205 
+
+Generating User Edits
+----------------------------
+Inserting into Dentist table
+-----------------------------
+INSERT 0 4
+Inserting into Assistant table
+-------------------------------
+INSERT 0 3
+Inserting into Procedure table
+-------------------------------
+INSERT 0 4
+Inserting into Patient table
+-------------------------------
+INSERT 0 3
+Inserting new appts into Appointment table
+-------------------------------------------
+INSERT 0 3
+Removing from Bob Kornhaas from Dentist
+---------------------------------------
+DELETE 1
+Adding Jeff Mellon to Dentist
+-------------------------------------------
+INSERT 0 1
+Removing Kyle Lucke from Patient
+------------------------------------
+DELETE 1
+Update appt 3 to have assistant Jada Brown
+-------------------------------------------
+UPDATE 1
+Removing Andrea Gillespie from Assistant
+-----------------------------------------
+DELETE 1
+Inserting new appts into Appointment table
+-------------------------------------------
+INSERT 0 2
+Updating time of appointment 5
+-------------------------------------------
+UPDATE 1
+ 
+----------------------------
+End of script

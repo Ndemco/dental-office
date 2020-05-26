@@ -1,0 +1,40 @@
+Script run on Thu 12/05/2019 at 12:09 PM
+Script run by  demarco018  on server  classdb.wcsu.edu  with db  cs205 
+
+Generating Monthly Bills
+----------------------------
+  patient_name  |     street      |   city    | state |  zip  
+----------------+-----------------+-----------+-------+-------
+ Jeanne Marquis | 10 South Street | Southbury | CT    | 12345
+(1 row)
+
+ service_provider |   procedure   | dateofservice | cost 
+------------------+---------------+---------------+------
+ Scott Fawcett    | Cleaning      | 2019-12-03    |   80
+ Brenda Aurelia   | Tooth Removal | 2019-12-03    | 1000
+(2 rows)
+
+ total_cost 
+------------
+       1080
+(1 row)
+
+  patient_name  |    street     |  city   | state |  zip  
+----------------+---------------+---------+-------+-------
+ Patricia Renda | 5 Main Street | Danbury | CT    | 12343
+(1 row)
+
+ service_provider |   procedure   | dateofservice | cost 
+------------------+---------------+---------------+------
+ Brenda Aurelia   | Cleaning      | 2019-12-01    |   80
+ Scott Fawcett    | Tooth Removal | 2019-12-02    | 1000
+(2 rows)
+
+ total_cost 
+------------
+       1080
+(1 row)
+
+ 
+----------------------------
+End of script

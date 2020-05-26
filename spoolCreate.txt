@@ -1,0 +1,34 @@
+Script run on Thu 12/05/2019 at 12:08 PM
+Script run by  demarco018  on server  classdb.wcsu.edu  with db  cs205 
+
+Creating Dentist table
+----------------------------
+CREATE TABLE
+ 
+ 
+Creating Assistant table
+----------------------------
+CREATE TABLE
+ 
+ 
+Creating Procedure table
+----------------------------
+CREATE TABLE
+ 
+ 
+Creating Patient table
+----------------------------
+CREATE TABLE
+ 
+ 
+Creating Appointment table
+----------------------------
+CREATE TABLE
+ 
+ 
+Creating AssistantHoursWorked view
+-----------------------------------
+CREATE VIEW
+ 
+----------------------------
+End of script

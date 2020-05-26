@@ -1,0 +1,29 @@
+Script run on Thu 12/05/2019 at 12:08 PM
+Script run by  demarco018  on server  classdb.wcsu.edu  with db  cs205 
+
+ 
+Dropping AssistantHoursWorked
+------------------------------
+DROP VIEW
+ 
+Dropping Appointment
+----------------------------
+DROP TABLE
+ 
+Dropping Patient
+----------------------------
+DROP TABLE
+ 
+Dropping Procedure
+----------------------------
+DROP TABLE
+ 
+Dropping Assistant
+----------------------------
+DROP TABLE
+Dropping Dentist
+----------------------------
+DROP TABLE
+ 
+----------------------------
+End of script

@@ -1,0 +1,90 @@
+Script run on Thu 12/05/2019 at 12:09 PM
+Script run by  demarco018  on server  classdb.wcsu.edu  with db  cs205 
+
+                   Table "demarco018.dentist"
+ Column |         Type          | Collation | Nullable | Default 
+--------+-----------------------+-----------+----------+---------
+ id     | integer               |           | not null | 
+ name   | character varying(30) |           | not null | 
+Indexes:
+    "dentist_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "dentist_name_check" CHECK (name::text <> ''::text)
+Referenced by:
+    TABLE "appointment" CONSTRAINT "appointment_dentistid_fkey" FOREIGN KEY (dentistid) REFERENCES dentist(id)
+
+                  Table "demarco018.assistant"
+ Column |         Type          | Collation | Nullable | Default 
+--------+-----------------------+-----------+----------+---------
+ id     | integer               |           | not null | 
+ name   | character varying(30) |           | not null | 
+Indexes:
+    "assistant_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "assistant_name_check" CHECK (name::text <> ''::text)
+Referenced by:
+    TABLE "appointment" CONSTRAINT "appointment_assistantid_fkey" FOREIGN KEY (assistantid) REFERENCES assistant(id)
+
+                  Table "demarco018.procedure"
+ Column |         Type          | Collation | Nullable | Default 
+--------+-----------------------+-----------+----------+---------
+ name   | character varying(30) |           | not null | 
+ cost   | integer               |           | not null | 
+Indexes:
+    "procedure_pkey" PRIMARY KEY, btree (name)
+Check constraints:
+    "procedure_name_check" CHECK (name::text <> ''::text)
+Referenced by:
+    TABLE "appointment" CONSTRAINT "appointment_procedure_fkey" FOREIGN KEY (procedure) REFERENCES procedure(name)
+
+                     Table "demarco018.appointment"
+    Column     |          Type          | Collation | Nullable | Default 
+---------------+------------------------+-----------+----------+---------
+ id            | integer                |           | not null | 
+ patientid     | integer                |           | not null | 
+ dentistid     | integer                |           | not null | 
+ procedure     | character varying(30)  |           | not null | 
+ assistantid   | integer                |           |          | 
+ dateofservice | date                   |           | not null | 
+ timein        | time without time zone |           | not null | 
+ timeout       | time without time zone |           | not null | 
+Indexes:
+    "appointment_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "appointment_assistantid_fkey" FOREIGN KEY (assistantid) REFERENCES assistant(id)
+    "appointment_dentistid_fkey" FOREIGN KEY (dentistid) REFERENCES dentist(id)
+    "appointment_patientid_fkey" FOREIGN KEY (patientid) REFERENCES patient(id)
+    "appointment_procedure_fkey" FOREIGN KEY (procedure) REFERENCES procedure(name)
+
+                        Table "demarco018.patient"
+     Column      |         Type          | Collation | Nullable | Default 
+-----------------+-----------------------+-----------+----------+---------
+ id              | integer               |           | not null | 
+ name            | character varying(30) |           | not null | 
+ street          | character varying(40) |           | not null | 
+ city            | character varying(30) |           | not null | 
+ state           | character(2)          |           | not null | 
+ zip             | character(5)          |           | not null | 
+ dateofbirth     | date                  |           | not null | 
+ dentalinsurance | character varying(50) |           |          | 
+Indexes:
+    "patient_pkey" PRIMARY KEY, btree (id)
+Check constraints:
+    "patient_city_check" CHECK (city::text <> ''::text)
+    "patient_name_check" CHECK (name::text <> ''::text)
+    "patient_state_check" CHECK (state <> ''::bpchar)
+    "patient_street_check" CHECK (street::text <> ''::text)
+    "patient_zip_check" CHECK (zip <> ''::bpchar)
+Referenced by:
+    TABLE "appointment" CONSTRAINT "appointment_patientid_fkey" FOREIGN KEY (patientid) REFERENCES patient(id)
+
+                View "demarco018.assistanthoursworked"
+    Column    |         Type          | Collation | Nullable | Default 
+--------------+-----------------------+-----------+----------+---------
+ assistantid  | integer               |           |          | 
+ name         | character varying(30) |           |          | 
+ hours_worked | interval              |           |          | 
+
+ 
+----------------------------
+End of script
