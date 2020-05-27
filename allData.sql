@@ -7,11 +7,8 @@
 
 -- Change Summary: Version 1; no changes
 
--- The results of running this script will be spooled to 
--- 'spoolAllData.txt'
-
-
-\o 'spoolAllData.txt'
+-- Uncomment the line below this and the last line '\o' to spool the results.
+-- \o 'spoolAllData.txt'
 
 -- Output script execution data
 \qecho -n 'Script run on '
@@ -21,8 +18,6 @@
 \qecho -n 'Script run by ' :USER ' on server ' :HOST ' with db ' :DBNAME
 \qecho ' '
 \qecho
-
-
 
 --read Dentist table 
 \qecho Dentist table 
@@ -87,5 +82,5 @@ FROM AssistantHoursWorked;
 \qecho ----------------------------
 \qecho End of script
 
---Turn off spooling
-\o
+-- Turn off spooling
+-- \o

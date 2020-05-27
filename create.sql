@@ -11,7 +11,8 @@
 --Changed 'name' field in Procedure to be Primary Key and got rid of
 --procedureID.
 
-\o 'spoolCreate.txt'
+-- Uncomment the line below this and the last line '\o' to spool the results.
+-- \o 'spoolCreate.txt'
 
 -- Output script execution data
 \qecho -n 'Script run on '
@@ -107,4 +108,4 @@ GROUP BY AssistantID, name;
 \qecho End of script
 
 -- Turn off spooling
-\o
+-- \o

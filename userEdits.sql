@@ -6,7 +6,8 @@
 
 --Based on: Logical Schema, Version 4
 
-\o 'spoolUserEdits.txt'
+-- Uncomment the line under this and the last line '\o' to spool results.
+-- \o 'spoolUserEdits.txt'
 
 -- Output script execution data
 \qecho -n 'Script run on '
@@ -115,4 +116,4 @@ WHERE ID = 5;
 \qecho End of script
 
 -- Turn off spooling
-\o
+-- \o

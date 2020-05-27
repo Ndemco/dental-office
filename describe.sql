@@ -9,8 +9,8 @@
 -- The results of running this script will be spooled to 
 -- 'spoolDescribe.txt'
 
-
-\o 'spoolDescribe.txt'
+-- Uncomment the line below this and the last line '\o' to spool results.
+-- \o 'spoolDescribe.txt'
 
 -- Output script execution data
 \qecho -n 'Script run on '
@@ -47,4 +47,4 @@
 \qecho 'End of script'
 
 -- Turn off spooling
-\o
+-- \o

@@ -1,17 +1,20 @@
---Nick DeMarco; CS205-01; Fall2019
+-- Nick DeMarco; CS205-01; Fall2019
 
---drop.sql
+-- drop.sql
 
---Delete the physical schema for Dental Office
+-- Delete the physical schema for Dental Office
 
---Based on: Logical Schema, Version 4
+-- Based on: Logical Schema, Version 4
 
---The results of running this script will be spooled to
+-- The results of running this script will be spooled to
 --'spoolDrop.txt'
 
-\o 'spoolDrop.txt'
+
+-- Uncomment the line below this and the last line '\o' to spool results.
+-- \o 'spoolDrop.txt'
 
 -- Output script execution data
+
 \qecho -n 'Script run on '
 \qecho -n `date /t`
 \qecho -n 'at '
@@ -60,4 +63,4 @@ DROP TABLE IF EXISTS Dentist CASCADE;
 \qecho End of script
 
 -- Turn off spooling
-\o
+-- \o
